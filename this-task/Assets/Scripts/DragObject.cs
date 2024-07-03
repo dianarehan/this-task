@@ -10,18 +10,22 @@ public class DragObject : MonoBehaviour
     private Vector3 offset;
     private bool isSupervisor;
     private bool isNormal;
-
+    private string typeOfUser;
+    private void Start()
+    {
+        typeOfUser = readFromFile.typeOfUser;
+    }
 
 
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (typeOfUser.CompareTo("normal")==0|| Input.GetKeyDown(KeyCode.Z))
         {
             setNormal();
         }
-        if(Input.GetKeyDown(KeyCode.X))
+        if(typeOfUser.CompareTo("supervisor") == 0||Input.GetKeyDown(KeyCode.X))
         {
             setSupervisor();
         }
