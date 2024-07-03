@@ -258,6 +258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueSphere
       objectReference: {fileID: 0}
+    - target: {fileID: 7091543986999258189, guid: 55a0bb5285f11524c99314e47af72ac4, type: 3}
+      propertyPath: m_TagString
+      value: blueObject
+      objectReference: {fileID: 0}
     - target: {fileID: 9121719661761039898, guid: 55a0bb5285f11524c99314e47af72ac4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5182526
@@ -788,6 +792,10 @@ PrefabInstance:
     - target: {fileID: 2283570601910177689, guid: c010496473582174b9d6be66d245e5c5, type: 3}
       propertyPath: m_Name
       value: BlueCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283570601910177689, guid: c010496473582174b9d6be66d245e5c5, type: 3}
+      propertyPath: m_TagString
+      value: blueObject
       objectReference: {fileID: 0}
     - target: {fileID: 3053833318823019308, guid: c010496473582174b9d6be66d245e5c5, type: 3}
       propertyPath: m_LocalPosition.x
