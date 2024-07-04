@@ -17,7 +17,7 @@ public class readFromFile : MonoBehaviour
 
     IEnumerator ReadFromFile()
     {
-        string path = Path.Combine(Application.dataPath, filePath);
+        string path = Path.Combine("C:\\Users\\Lenovo-11\\Desktop", filePath);
 
         if (File.Exists(path))
         {

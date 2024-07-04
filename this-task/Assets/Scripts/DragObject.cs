@@ -14,6 +14,9 @@ public class DragObject : MonoBehaviour
     private void Start()
     {
         typeOfUser = readFromFile.typeOfUser;
+        Debug.Log(typeOfUser);
+        Debug.Log("isnormal "+ isNormal);
+        Debug.Log("is Supervisor " + isSupervisor);
     }
 
 
@@ -21,12 +24,14 @@ public class DragObject : MonoBehaviour
 
     void Update()
     {
-        if (typeOfUser.CompareTo("normal")==0|| Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
+            // typeOfUser.CompareTo("normal")==0||
             setNormal();
         }
-        if(typeOfUser.CompareTo("supervisor") == 0||Input.GetKeyDown(KeyCode.X))
+        else if(Input.GetKeyDown(KeyCode.X))
         {
+            //typeOfUser.CompareTo("supervisor") == 0||
             setSupervisor();
         }
     }
@@ -36,7 +41,7 @@ public class DragObject : MonoBehaviour
     {
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, screenPoint.y, screenPoint.z));
+        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 
     }
 

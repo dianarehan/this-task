@@ -10,6 +10,14 @@ public class PlayerController : MonoBehaviour
     private float rotationSpeed = 5f;
     public GameObject camera;
     private Quaternion rotation;
+
+
+    public UserTypeHandler userTypeHandler;
+
+     public void doYourJob()
+    {
+        userTypeHandler.FetchUserType();
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody>();
