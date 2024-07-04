@@ -10,28 +10,17 @@ public class DragObject : MonoBehaviour
     private Vector3 offset;
     private bool isSupervisor;
     private bool isNormal;
-    private string typeOfUser;
-    private void Start()
-    {
-        typeOfUser = readFromFile.typeOfUser;
-        Debug.Log(typeOfUser);
-        Debug.Log("isnormal "+ isNormal);
-        Debug.Log("is Supervisor " + isSupervisor);
-    }
+    private static string typeOfUser;
 
-
-
-
+    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (typeOfUser!=null &&typeOfUser.CompareTo("normal")==0)
         {
-            // typeOfUser.CompareTo("normal")==0||
             setNormal();
         }
-        else if(Input.GetKeyDown(KeyCode.X))
+        if(typeOfUser != null &&typeOfUser.CompareTo("supervisor")==0)
         {
-            //typeOfUser.CompareTo("supervisor") == 0||
             setSupervisor();
         }
     }
@@ -61,19 +50,25 @@ public class DragObject : MonoBehaviour
         
 
     }
+    public static void setTheUserType(string type)
+    {   
 
+        typeOfUser = type;
+        Debug.Log("current type of user is: " + typeOfUser);
+
+    }
 
     private void setSupervisor()
     {
         
-        isSupervisor = !isSupervisor;
-        isNormal = !isSupervisor;
+        isSupervisor = true;
+        isNormal = false;
     }
 
 
     private void setNormal()
     {
-        isNormal = !isNormal;
-        isSupervisor = !isNormal;
+        isNormal = true;
+        isSupervisor = false;
     }
 }

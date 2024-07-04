@@ -12,11 +12,11 @@ public class PlayerController : MonoBehaviour
     private Quaternion rotation;
 
 
-    public UserTypeHandler userTypeHandler;
+    //public UserTypeHandler userTypeHandler;
 
      public void doYourJob()
     {
-        userTypeHandler.FetchUserType();
+        //userTypeHandler.StartFetchingUserInput();
     }
     void Start()
     {
